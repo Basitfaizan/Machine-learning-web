@@ -20,6 +20,9 @@
     <div class="firstPart">
       <img src="dp.jpg" alt="Profile">
       <span class="dp_name">Basit Faizan</span>
+      <svg class="removeSideNav" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#fff" class="bi bi-x-circle-fill" viewBox="0 0 16 16">
+        <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z"/>
+      </svg>
     </div>
     <div class="secondPart">
       <ul>
@@ -39,22 +42,63 @@
     </div>
   </div>
   <div class="mainBody">
+    <svg class="hamburger" xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#fff" class="bi bi-list" viewBox="0 0 16 16">
+      <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+    </svg>
     <div class="fullBox">
-      <div class="box firstBox">
+      <div class="box firstBox deactive">
+        <div class="showBox">
+          <svg style="color: white" xmlns="http://www.w3.org/2000/svg" width="46" height="46" fill="currentColor" class="bi bi-camera-reels-fill" viewBox="0 0 16 16"> <path d="M6 3a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" fill="white"></path> <path d="M9 6a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" fill="white"></path> <path d="M9 6h.5a2 2 0 0 1 1.983 1.738l3.11-1.382A1 1 0 0 1 16 7.269v7.462a1 1 0 0 1-1.406.913l-3.111-1.382A2 2 0 0 1 9.5 16H2a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h7z" fill="white"></path> </svg>
+          <span class="showBoxName">Movie Recommended System</span>
+        </div>
+        <div class="hiddenBox">
+          <svg class="cutClass" xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#fff" class="bi bi-arrow-left-circle-fill" viewBox="0 0 16 16">
+            <path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0zm3.5 7.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5z"/>
+          </svg>
+          <div class="mainBoxContainer">
+            <div class="inputSpace">
+              <input type="text" class="nameInput" placeholder="Enter here for Movie Recommendation">
+            </div>
+            <div class="imageSlider">
+              <button class="sliderBtn left">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#fff" class="bi bi-arrow-left-circle-fill" viewBox="0 0 16 16">
+                  <path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0zm3.5 7.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5z"/>
+                </svg>
+              </button>
+              <div class="imageSliderContent">
+                <img src="movies.jpg" alt="">
+                <img src="movies.jpg" alt="">
+                <img src="movies.jpg" alt="">
+                <img src="movies.jpg" alt="">
+                <img src="movies.jpg" alt="">
+                <img src="movies.jpg" alt="">
+                <img src="movies.jpg" alt="">
+                <img src="movies.jpg" alt="">
+                <img src="movies.jpg" alt="">
+                <img src="movies.jpg" alt="">
+                <img src="movies.jpg" alt="">
+                <img src="movies.jpg" alt="">
+                <img src="movies.jpg" alt="">
+                <img src="movies.jpg" alt="">
+                <img src="movies.jpg" alt="">
+              </div>
+              <button class="sliderBtn right" >
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#fff" class="bi bi-arrow-right-circle-fill" viewBox="0 0 16 16">
+                  <path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"/>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="box firstBox deactive">
         <div class="showBox">
           <svg style="color: white" xmlns="http://www.w3.org/2000/svg" width="46" height="46" fill="currentColor" class="bi bi-camera-reels-fill" viewBox="0 0 16 16"> <path d="M6 3a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" fill="white"></path> <path d="M9 6a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" fill="white"></path> <path d="M9 6h.5a2 2 0 0 1 1.983 1.738l3.11-1.382A1 1 0 0 1 16 7.269v7.462a1 1 0 0 1-1.406.913l-3.111-1.382A2 2 0 0 1 9.5 16H2a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h7z" fill="white"></path> </svg>
           <span class="showBoxName">Movie Recommended System</span>
         </div>
         <div class="hiddenBox"></div>
       </div>
-      <div class="box firstBox">
-        <div class="showBox">
-          <svg style="color: white" xmlns="http://www.w3.org/2000/svg" width="46" height="46" fill="currentColor" class="bi bi-camera-reels-fill" viewBox="0 0 16 16"> <path d="M6 3a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" fill="white"></path> <path d="M9 6a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" fill="white"></path> <path d="M9 6h.5a2 2 0 0 1 1.983 1.738l3.11-1.382A1 1 0 0 1 16 7.269v7.462a1 1 0 0 1-1.406.913l-3.111-1.382A2 2 0 0 1 9.5 16H2a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h7z" fill="white"></path> </svg>
-          <span class="showBoxName">Movie Recommended System</span>
-        </div>
-        <div class="hiddenBox"></div>
-      </div>
-      <div class="box firstBox">
+      <div class="box firstBox deactive">
         <div class="showBox">
           <svg style="color: white" xmlns="http://www.w3.org/2000/svg" width="46" height="46" fill="currentColor" class="bi bi-camera-reels-fill" viewBox="0 0 16 16"> <path d="M6 3a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" fill="white"></path> <path d="M9 6a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" fill="white"></path> <path d="M9 6h.5a2 2 0 0 1 1.983 1.738l3.11-1.382A1 1 0 0 1 16 7.269v7.462a1 1 0 0 1-1.406.913l-3.111-1.382A2 2 0 0 1 9.5 16H2a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h7z" fill="white"></path> </svg>
           <span class="showBoxName">Movie Recommended System</span>
@@ -73,6 +117,7 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
     -->
+    <script src="main.js"></script>
 </body>
 
 </html>

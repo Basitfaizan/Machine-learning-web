@@ -17,6 +17,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-around;
+  overflow: hidden;
 }
 
 .sideNav {
@@ -31,11 +32,12 @@ body {
   height: 15vh;
   display: flex;
   align-items: center;
+  position: relative;
 }
 
 .firstPart img {
-  width: 10rem;
-  height: 10rem;
+  width: 6rem;
+  height: 6rem;
   border-radius: 50%;
   margin-left: 2rem;
   margin-right: 2rem;
@@ -55,6 +57,7 @@ body {
   width: 100%;
   height: 95vh;
 }
+
 .secondPart ul li {
   width: 90%;
   margin-bottom: 2rem;
@@ -65,10 +68,12 @@ body {
   transition: background 0.5s ease;
   height: 6rem;
 }
-.secondPart ul li:hover{
+
+.secondPart ul li:hover {
   background: #4E2ECF;
 }
-.secondPart ul li a{
+
+.secondPart ul li a {
   width: 100%;
   display: flex;
   align-items: center;
@@ -81,7 +86,7 @@ body {
 
 
 .mainBody {
-  width: 67vw;
+  width: 75vw;
   height: 95vh;
   background: rgba(255, 255, 255, 0.2);
   border-radius: 2rem;
@@ -89,42 +94,133 @@ body {
   place-items: center;
   position: relative;
 }
-.fullBox{
-  width: 50vw;
+.hamburger{
+  display: none;
+}
+.fullBox {
+  width: 60vw;
   height: 50vh;
   display: grid;
-  grid-template-columns: repeat(3,1fr);
+  grid-template-columns: repeat(3, 1fr);
   grid-gap: 3rem;
 }
-.box{
+
+.box {
   border: 2px solid #fff;
   border-radius: 1rem;
   height: 20rem;
 }
-.showBox{
+
+.box.deactive {
+  border: none;
+}
+
+.showBox {
   width: 100%;
   height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
-  
+  display: none;
+  overflow: hidden;
+
 }
-.showBoxName{
+
+.showBoxName {
   font-size: 1.5rem;
   color: #fff;
   font-weight: 700;
 }
-.hiddenBox{
-  width: 67vw;
+
+.hiddenBox {
+  width: 75vw;
   height: 95vh;
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0);
   border-radius: 2rem;
   position: absolute;
   top: 0;
   left: 0;
   z-index: 100;
 }
+
+.cutClass {
+  margin-top: 2rem;
+  margin-left: 2rem;
+}
+
+.mainBoxContainer {
+  width: 75vw;
+  height: 85vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.inputSpace .nameInput {
+  width: 60vw;
+  height: 3.7rem;
+  padding: 0.4rem;
+  background: transparent;
+  border: 2px solid #fff;
+  border-radius: 0.5rem;
+  color: #fff;
+  font-size: 1.5rem;
+
+}
+
+.imageSlider {
+  width: 75vw;
+  height: 20rem;
+  margin-top: 7rem;
+  position: relative;
+}
+
+.sliderBtn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0);
+  border: none;
+  outline: none;
+}
+
+.left {
+  margin-left: 2rem;
+}
+
+.right {
+  right: 0;
+  margin-right: 2rem;
+}
+
+.imageSliderContent {
+  width: 75vw;
+  height: 20rem;
+  display: flex;
+  overflow-x: scroll;
+}
+
+.imageSliderContent::-webkit-scrollbar {
+  display: none;
+}
+
+.imageSliderContent img {
+  margin-right: 2rem;
+}
+
+.imageSliderContent img:first-child {
+  margin-left: 1rem;
+}
+
+.imageSliderContent img:last-child {
+  margin-right: 1rem;
+}
+
+
+
+
 
 
 
@@ -133,11 +229,92 @@ body {
 
 @media (max-width: 1000px) {
   .sideNav {
-    width: 27vw;
+    width: 20vw;
   }
-  .fullBox{
-    grid-template-columns: repeat(2,1fr);
+
+  .fullBox {
+    grid-template-columns: repeat(2, 1fr);
     width: 60vw;
     height: 30vh;
   }
+}
+
+@media (max-width: 760px) {
+  .dp_name {
+    font-size: 1.2rem;
+    font-weight: 500;
+  }
+
+  .firstPart img {
+    width: 3.4rem;
+    height: 3.4rem;
+  }
+
+  .secondPart ul li {
+    width: 100%;
+    height: 4rem;
+    padding: 0.9rem;
+  }
+
+  .secondPart ul li a {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  html {
+    font-size: 40.5%;
+  }
+
+  .sideNav {
+    position: absolute;
+    top: 50%;
+    left: -100%;
+    transform: translateY(-50%);
+    width: 30vw;
+    z-index: 10000;
+    background: #4E2ECF;
+    transition: left 0.5s ease;
+  }
+  .sideNav.active{
+    left: 3rem;
+  }
+
+  .mainBody {
+    width: 93vw;
+  }
+  .hiddenBox{
+    width: 93vw;
+  }
+  .mainBoxContainer{
+    width: 93vw;
+  }
+  .imageSlider,.imageSliderContent{
+    width: 93vw;
+    height: 35rem;
+  }
+  .inputSpace .nameInput{
+    width: 80vw;
+    height: 5rem;
+    padding: 1rem;
+  }
+  .secondPart ul li a {
+    font-size: 1.3rem;
+  }
+
+  .removeSideNav {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+  }
+  .hamburger{
+    display: block;
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+  }
+
+
+
+
 }
