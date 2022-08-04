@@ -8,11 +8,11 @@ console.log('hello');
 left.addEventListener('click',()=>{
     console.log('left');
     let bigWidth = imageSliderContent.getBoundingClientRect();
-    imageSliderContent.scrollLeft -= bigWidth.width- 200;
+    imageSliderContent.scrollLeft -= bigWidth.width- 100;
 })
 right.addEventListener('click',()=>{
     let bigWidth4 = imageSliderContent.getBoundingClientRect();
-    imageSliderContent.scrollLeft += bigWidth4.width+ 200;;
+    imageSliderContent.scrollLeft += bigWidth4.width+ 100;;
 })
 // end image slider
 // start navbar
@@ -26,3 +26,28 @@ hamburger.addEventListener('click',()=>{
 removeSidenav.addEventListener('click',()=>{
     sideNav.classList.remove('active')
 })
+// end navbar
+ let box = document.querySelector('.box')
+ let showBox = document.querySelector('.showBox')
+ let hiddenBox = document.querySelector('.hiddenBox')
+
+box.addEventListener('click',()=>{
+    box.classList.add('deactivate')
+    showBox.classList.add('deactivate')
+    hiddenBox.classList.add('activate')
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
