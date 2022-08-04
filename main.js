@@ -8,11 +8,11 @@ console.log('hello');
 left.addEventListener('click',()=>{
     console.log('left');
     let bigWidth = imageSliderContent.getBoundingClientRect();
-    imageSliderContent.scrollLeft -= bigWidth.width- 100;
+    imageSliderContent.scrollLeft -= bigWidth.width- 200;
 })
 right.addEventListener('click',()=>{
     let bigWidth4 = imageSliderContent.getBoundingClientRect();
-    imageSliderContent.scrollLeft += bigWidth3.width+ 100;;
+    imageSliderContent.scrollLeft += bigWidth4.width+ 200;;
 })
 // end image slider
 // start navbar
